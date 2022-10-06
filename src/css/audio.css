@@ -54,16 +54,16 @@ button:hover{
     color: white;
 } 
 
-.active {
-    background-color: green;
+/* .active {
+    background-color: red;
     color: white;
-}
+} */
 
-.deactive{
+/* .deactive{
     display: flex;
     align-items: center;
     background-color: grey;
     border-radius: 30px;
     padding: 10px;
     border-style: none;
-}
+} */

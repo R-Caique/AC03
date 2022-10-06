@@ -10,9 +10,6 @@ button.addEventListener('click', e => {
     listening ? recognition.stop() : recognition.start();
 
     button.innerHTML = listening ? 'Aperte para falar <img src="/src/img/microphone.png" alt="">' : 'Parar de falar <img src="/src/img/microphone.png" alt="">'
-
-    button.classList.toggle('active');
-    button.classList.toggle('deactive');
     
 })
 
@@ -21,12 +18,11 @@ function createRecognition() {
     const recognition = SpeechRecognition !== undefined ? new SpeechRecognition() : null
 
     if(!recognition) {
-        text.innerHTML ="Spreech Recognition is not found!"
+        text.innerHTML ="Serviço SpeechRecognition não disponível, verifique a disponibilidade dele em seu navegador!"
         return null
     }
 
     recognition.lang = "pt_BR"
-
     recognition.onstart = () =>  listening = true
     recognition.onend = () => listening = false
     recognition.onerror = (e) => alert(e)
